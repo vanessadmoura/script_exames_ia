@@ -1,0 +1,6 @@
+venv/
+__pycache__/
+
+.env
+*.pyc
+sinuous-photon-453020-i0-511995fda242.json
