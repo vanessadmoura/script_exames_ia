@@ -24,7 +24,8 @@ def criar_mensagem_generica_cliente(nome_do_cliente, descricao):
     1) Cumprimente o Cliente pelo seu nome.
     2) Verifique se a Descrição fornecida é uma prescrição, encaminhamento ou exame.
     3) Passe as informações para o cliente de forma amigável.
-    4) Incentive o cliente a realizar o exame/encaminhamento com a nossa clínica.
+    4) Se a Descrição for Exame ou Encaminhamento, incentive o cliente a realizar o exame/encaminhamento com a nossa clínica.
+    5) Se for uma prescição passe para o cliente as informações de como utilizar os remédios.
 
     Informações:
     Nome do Cliente : {nome_do_cliente}
@@ -70,7 +71,7 @@ def identificar_tipo_de_receita(descricao):
     """
     
     response = client.chat.completions.create(
-        model="gpt-4o",
+        model="gpt-4o-mini",
         messages=[
             {"role": "system", "content": system_message},
             {"role": "user", "content": f"Descrição: {descricao}"}
@@ -143,7 +144,7 @@ def enviar_mensagem_lembrete_exame_imagem(nome_cliente, tipo_exame):
     """
 
     response = client.chat.completions.create(
-        model="gpt-4o",
+        model="gpt-4o-mini",
         messages=[
             {"role": "system", "content": system_message}
         ],
@@ -200,3 +201,7 @@ for _, linha in df.iterrows():
     except Exception as e:
         print(f"Erro ao processar a linha {linha['ID']}: {e}")
 
+
+# receita = "À Nutricionista; Encaminho paciente acima, 75 anos, com alteração glicemica inicial, para avaliação e conduta.  Grata,"
+# tipo_receita = identificar_tipo_de_receita(receita)
+# print(criar_mensagem_generica_cliente("vanessa", receita))

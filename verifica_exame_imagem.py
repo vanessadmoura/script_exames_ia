@@ -2,15 +2,20 @@ import re
 
 
 palavras_chave_exames_imagem = [
-    "radiografia", "raio-x", "raio x", "rx", "tomografia", "tc", "ressonância magnética", "rm", "ultrassonografia", "us", "ressonancia",
-    "mamografia", "mmg", "densitometria óssea", "dmo", "angiografia", "ag", "arteriografia", "ar", "venografia", "vg",
-    "fluoroscopia", "fs", "cintigrafia", "cg", "colangiopancreatografia endoscópica retrógrada", "cpre", "urografia", "ug",
-    "laparoscopia", "lps", "artroscopia", "ats", "endoscopia", "es", "colonoscopia", "cc", "cistoscopia", "cs",
-    "broncoscopia", "bs", "dacriocistografia", "dcs", "histerossalpingografia", "hsg", "esofagografia", "egf", 
-    "videofluoroscopia de deglutição", "vfd", "raio-x", "raio x", "raios-x", "raios x", "tomografia computadorizada"
-    "ultrassonografia", "ultrassom", "mamografia", "densitometria óssea", "cintigrafia", "colangiopancreatografia", "cpre", "Doppler",
-    "endoscopia", "laparoscopia", "artroscopia", "broncoscopia", "histerossalpingografia", "dacriocistografia", 
-    "histerossalpingografia", "colonoscopia", "cistoscopia", "videofluoroscopia", "ressonância magnética", "ressonancia magnetica", "ressonância nuclear magnética", "rnm", "ressonância magnética nuclear", "rmn", "Ecodopplercardiograma Transtorácico"
+    "radiografia", "raio-x", "raio x", "rx", "tomografia", "tc",
+    "ressonância magnética", "rm", "ultrassonografia", "us", "ressonancia", "mamografia",
+    "mmg", "densitometria óssea", "dmo", "angiografia", "ag", "arteriografia",
+    "ar", "venografia", "vg", "fluoroscopia", "fs", "cintigrafia",
+    "cg", "cpre", "urografia", "ug", "laparoscopia",
+    "lps", "artroscopia", "ats", "endoscopia", "es", "colonoscopia",
+    "cc", "cistoscopia", "cs", "broncoscopia", "bs", "dacriocistografia",
+    "dcs", "histerossalpingografia", "hsg", "esofagografia", "egf", "videofluoroscopia",
+    "vfd", "Pelve", "Transvaginal", "Pé", "Abdome Total", "Articular",
+    "Mamas", "Angio-Rm", "Crânio", "Coluna Dorsal",
+    "Órgãos Superficiais", "Coluna Lombo-Sacra", "Pé Ou Pododáctilo", "Abdome Superior", "Coluna Cervical",
+    "Coluna Lombar", "Joelho", "Adenóides Ou Cavum", "Abdome Inferior Feminino", "Angiotomografia coronariana", "Bacia",
+    "Aparelho Urinário Feminino", "Doppler", "Tórax", "rmn", "rnm", "tomografia computadorizada", "ultrassom", "colangiopancreatografia"
+    
 ]
 
 siglas_para_nome = {
